@@ -22,20 +22,6 @@ hook.Add( "Initialize", "AutoTTTMapVote", function()
             end
         end
       end
-      
-      if GAMEMODE_NAME == "deathrun" then
-          function RTV.Start()
-            MapVote.Start(nil, nil, nil, nil)
-          end
-      end
-      
-      if GAMEMODE_NAME == "zombiesurvival" then
-        hook.Add("LoadNextMap", "MAPVOTEZS_LOADMAP", function()
-          MapVote.Start(nil, nil, nil, nil)
-          return true   
-        end )
-      end
-
 end )
 
 
