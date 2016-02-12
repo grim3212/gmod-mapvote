@@ -84,6 +84,7 @@ function PANEL:Init()
     self:ParentToHUD()
     
     self.Canvas = vgui.Create("Panel", self)
+    --Probably need to change this to get it to work with RDM Manager
     self.Canvas:MakePopup()
     self.Canvas:SetKeyboardInputEnabled(false)
     
@@ -108,7 +109,6 @@ function PANEL:Init()
     end
 
     self.closeButton.DoClick = function()
-        print("HI")
         self:SetVisible(false)
     end
 
